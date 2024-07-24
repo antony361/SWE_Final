@@ -1,0 +1,55 @@
+Library Management System - Test Document
+
+Introduction
+This document describes the test cases for the Library Management System and the observed results. The tests are written using JUnit 5 and aim to verify the functionality of the BookDAO and PatronDAO classes.
+
+Test Cases
+
+Test Case 1: Add Book
+- Description: Test the functionality of adding a book to the library.
+- Steps:
+  1. Create a unique book ID.
+  2. Create a new Book object with the unique ID and other details.
+  3. Call bookDAO.addBook(book) to add the book.
+  4. Retrieve all books using bookDAO.getAllBooks().
+  5. Verify that the book with the unique ID is present in the retrieved list.
+- Expected Result: The book should be added to the database and listed when getAllBooks() is called.
+- Actual Result: (Describe what actually happened during the test)
+
+Test Case 2: Get All Books
+- Description: Test the functionality of retrieving all books from the library.
+- Steps:
+  1. Call bookDAO.getAllBooks() to retrieve all books.
+  2. Verify that the retrieved list is not null and not empty.
+- Expected Result: The retrieved list should contain all books in the database.
+- Actual Result: (Describe what actually happened during the test)
+
+Test Case 3: Borrow Book
+- Description: Test the functionality of borrowing a book from the library.
+- Steps:
+  1. Retrieve all books using bookDAO.getAllBooks().
+  2. Select the first book's ID from the list.
+  3. Retrieve all patrons using patronDAO.getAllPatrons().
+  4. Select the first patron's ID from the list.
+  5. Call bookDAO.borrowBook(bookId, patronId) to borrow the book.
+  6. Retrieve all books again using bookDAO.getAllBooks().
+  7. Verify that the selected book's status is updated to "borrowed".
+- Expected Result: The selected book should be marked as borrowed in the database.
+- Actual Result: (Describe what actually happened during the test)
+
+Test Case 4: Return Book
+- Description: Test the functionality of returning a borrowed book to the library.
+- Steps:
+  1. Retrieve all books using bookDAO.getAllBooks().
+  2. Select the first book's ID from the list.
+  3. Retrieve all patrons using patronDAO.getAllPatrons().
+  4. Select the first patron's ID from the list.
+  5. Call bookDAO.borrowBook(bookId, patronId) to borrow the book.
+  6. Call bookDAO.returnBook(bookId, patronId) to return the book.
+  7. Retrieve all books again using bookDAO.getAllBooks().
+  8. Verify that the selected book's status is updated to "returned".
+- Expected Result: The selected book should be marked as returned in the database.
+- Actual Result: (Describe what actually happened during the test)
+
+Conclusion
+Summarize the overall testing results and any issues encountered.
