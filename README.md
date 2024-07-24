@@ -1,6 +1,8 @@
 # SWE_Final
 Library Management System
 
+Slide Deck: https://docs.google.com/presentation/d/1LgZ8w8OviHseWHmeM2GAlXmqONh-eFdrCX4Yc4MQ93I/edit?usp=sharing
+
 Description
 The Library Management System is a Java application that allows users to manage a library of books and patrons. The system supports functionalities such as adding books and patrons, listing all books and patrons, borrowing books, and returning books.
 
